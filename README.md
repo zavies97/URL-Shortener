@@ -9,10 +9,20 @@ The tech stack used in this application is as follows
   * appropriate tests created with jest
   * MongoDB
   * Docker
-  
-## Application setup
 
-## Running the application
+## Project Installation
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
 
 ## Running the tests
-  
