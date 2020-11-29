@@ -25,4 +25,9 @@ npm run serve
 npm run build
 ```
 
+### Run server
+```
+npm run start-dev
+```
+
 ## Running the tests
