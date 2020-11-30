@@ -12,6 +12,11 @@
         <div>
             <input type="submit" value="Submit">
         </div>
+        <br>
+        <br>
+        <div>
+          <!-- add list element here for get-->
+        </div>
     </div>
 </template>
 

@@ -31,3 +31,10 @@ npm run start-dev
 ```
 
 ## Running the tests
+```
+npm run test
+```
+
+## Caviats
+
+* It is assumed that this application would deploy alongside a real mongoDb instance. Local instance is created in the test enviornment in order to mimic production conditions

@@ -23,3 +23,7 @@ pnpm-debug.log*
 *.sw?
 
 package-lock.json
+
+/test/mongoDb instance/mongo-volume
+
+/handlers
