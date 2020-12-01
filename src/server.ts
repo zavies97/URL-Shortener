@@ -1,5 +1,3 @@
-import * as path from 'path';
-import * as express from 'express';
 import * as bodyParser from 'body-parser';
 import URLShortenerController, * as controllers from './controllers/URLShortenerController'
 import { Server } from '@overnightjs/core';
@@ -16,11 +14,9 @@ class MainServer extends Server {
         this.app.use(bodyParser.json());
         this.app.use(bodyParser.urlencoded({extended: true}));
         super.addControllers(new URLShortenerController());
-        // Point to front-end code
         if (process.env.NODE_ENV !== 'production') {
             const msg = this.DEV_MSG + process.env.EXPRESS_PORT;
             this.app.get('*', (req, res) => res.send(msg));
-            // this.app.post('*', (req, res) => res.send(msg));
         }
     }
 

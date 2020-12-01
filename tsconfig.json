@@ -14,7 +14,8 @@
       "importHelpers": true,
       "types": [
         "node",
-        "jest"
+        "jest",
+        "cors"
       ],
       "typeRoots": [
         "node_modules/@types"

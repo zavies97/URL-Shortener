@@ -1,10 +1,8 @@
 import { dropDatabase, addURL, getOneUrl, getAllUrl } from './../../src/handlers/URLShortenerHandler';
 
-describe('insert', () => {
+dropDatabase();
 
-  beforeAll( async () => {
-    dropDatabase();
-  })
+describe('insert', () => {
 
   afterAll(async () => {
     dropDatabase();
@@ -26,7 +24,6 @@ describe('insert', () => {
 
     const addedUrl = await getOneUrl(mockUrl);
 
-    console.log(addedUrl);
     expect(addedUrl.shortenedUrl).toEqual(mockUrl.shortenedUrl);
   })
 

@@ -1,25 +1,29 @@
-import { Controller, Get, Post } from '@overnightjs/core';
+import { ClassMiddleware, Controller, Get, Post } from '@overnightjs/core';
 import { Request, Response } from 'express';
 
 import URLShortener from './../URLShortener';
 import {  addURL, getOneUrl, getAllUrl } from './../../src/handlers/URLShortenerHandler';
 
+import * as cors from 'cors';
 
 @Controller('url')
+@ClassMiddleware(cors())
 class URLShortenerController {
 
-    public static readonly SUCCESS_MSG = 'the request works';
+    public static readonly SUCCESS_MSG = 'The request works';
 
     @Get('geturl')
     private async get(req: Request, res: Response) {
 
         let allURLs = await getAllUrl();
+
         return res.status(200).json({message: allURLs});
     }
     
-
     @Post('newurl')
     private async add(req: Request, res: Response) {
+
+        console.log(req.body);
 
         let generatedUrl;
 

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "start": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "start-dev": "nodemon --config \"./util/nodemon.json\"/",
     "test": "jest"
@@ -11,15 +11,18 @@
   "dependencies": {
     "@overnightjs/core": "^1.7.5",
     "@overnightjs/logger": "^1.2.0",
+    "@types/cors": "^2.8.8",
     "@types/jest": "^26.0.15",
     "@types/mongoose": "^5.10.1",
     "core-js": "^3.6.5",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "http-status-codes": "^2.1.4",
     "jest": "^26.6.3",
     "mongoose": "^5.10.18",
     "ts-jest": "^26.4.4",
-    "vue": "^2.6.11"
+    "vue": "^2.6.12",
+    "vue-promised": "^2.0.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
