@@ -1,7 +1,6 @@
 import * as path from 'path';
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
-// import DemoController, * as controllers from './controllers/DemoController';
 import URLShortenerController, * as controllers from './controllers/URLShortenerController'
 import { Server } from '@overnightjs/core';
 import { Logger } from '@overnightjs/logger';
