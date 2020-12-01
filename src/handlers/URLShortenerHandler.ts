@@ -1,15 +1,8 @@
 const {MongoClient} = require('mongodb');
 
-import URLShortener from './../URLShortener';
-
 let dbName = process.env.MONGO_INITDB_DATABASE ? process.env.MONGO_INITDB_DATABASE : 'testdb';
 let dbUser = process.env.MONGO_INITDB_ROOT_USERNAME ? process.env.MONGO_INITDB_ROOT_USERNAME : 'testuser';
 let dbPassword = process.env.MONGO_INITDB_ROOT_PASSWORD ? process.env.MONGO_INITDB_ROOT_PASSWORD : 'testpassword';
-
-// type RequestUrl = {
-//     shortenedUrl: string,
-//     originalUrl: string
-// }
 
 export async function dropDatabase () {
     const mongoDbUrl = 'mongodb://' + dbUser + ':' + dbPassword + '@127.0.0.1:27017/';
@@ -42,7 +35,7 @@ export async function addURL(requestUrl: Object) {
 
 }
 
-export async function getOneUrl (requestUrl: Object){
+export async function getOneUrl (requestUrl: Object) {
     
     const mongoDbUrl = 'mongodb://' + dbUser + ':' + dbPassword + '@127.0.0.1:27017/';
 

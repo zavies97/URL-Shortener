@@ -3,7 +3,6 @@ import * as mongoose from "mongoose";
 let dbName = process.env.MONGO_INITDB_DATABASE ? process.env.MONGO_INITDB_DATABASE : 'testdb';
 
 const uri: string = 'mongodb://127.0.0.1:27017/' + dbName;
-// mongodb://testuser:testpassword@127.0.0.1:27017/testdb
 
 mongoose.connect(uri, (err: any) => {
   if (err) {

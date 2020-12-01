@@ -1,12 +1,10 @@
-const {MongoClient} = require('mongodb');
-
 import { dropDatabase, addURL, getOneUrl, getAllUrl } from './../../src/handlers/URLShortenerHandler';
 
-let dbName = process.env.MONGO_INITDB_DATABASE ? process.env.MONGO_INITDB_DATABASE : 'testdb';
-let dbUser = process.env.MONGO_INITDB_ROOT_USERNAME ? process.env.MONGO_INITDB_ROOT_USERNAME : 'testuser';
-let dbPassword = process.env.MONGO_INITDB_ROOT_PASSWORD ? process.env.MONGO_INITDB_ROOT_PASSWORD : 'testpassword';
-
 describe('insert', () => {
+
+  beforeAll( async () => {
+    dropDatabase();
+  })
 
   afterAll(async () => {
     dropDatabase();
