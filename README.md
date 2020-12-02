@@ -98,7 +98,7 @@ To check that the user has been added, run the Get request
 
 ## Future updates
 
-* Restyling the front end application to make it look more appealing, and have nicer formatting. This also includes creating a list format for showing the url data instead of keeping it as an unsorted string type
+* Restyling the front end application to make it look more appealing, and have nicer formatting.
 
 * Adding front end unit tests and unit tests to mock the backend server endpoints
 

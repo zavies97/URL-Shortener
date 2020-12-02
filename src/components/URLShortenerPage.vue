@@ -12,12 +12,16 @@
         </div>
         <br>
         <input type="submit" value="Submit" @click="callPost" /> 
-        <div :class="{ hide: !seen }" id="hide">
-            {{ getList() }}
-        </div>
+
+        <input type="submit" value="Press to see list of urls" @click="getList" />
         <br>
         <br>
-        {{ message }}
+        <ul>
+          <li v-for="item in message" v-bind:key="item"> 
+            {{ originalUrlText }} {{ item.originalUrl }} {{ middleText }} {{ shortenedUrlText }}  {{ item.shortenedUrl }}
+
+          </li>
+        </ul>
     </div>
 </template>
 
@@ -31,7 +35,15 @@ export default {
   el: '#sendUrl',
   data() {
     return {
-      message: 'Loading'
+      originalUrlText: 'Original Url -> "',
+      middleText: '" ',
+      shortenedUrlText: 'Shortened Url: -> ',
+      message: [
+        {
+          originalUrl: 'Loading',
+          shortenedUrl: 'this'
+        }
+      ]
     }
   },
   methods: {
@@ -70,8 +82,9 @@ export default {
         }).then(response=>response.json()).then(returnValue=>{
 
           console.log(returnValue.message);
-
           this.message = returnValue.message;
+
+          console.log(this.message[0].originalUrl)
 
           return returnValue.message;
         });
