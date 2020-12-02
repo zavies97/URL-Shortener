@@ -12,9 +12,9 @@
         </div>
         <br>
         <input type="submit" value="Submit" @click="callPost" /> 
-        <br>
-        <br>
-        {{ getList() }}
+        <div :class="{ hide: !seen }" id="hide">
+            {{ getList() }}
+        </div>
         <br>
         <br>
         {{ message }}
@@ -97,4 +97,8 @@ export default {
     color: #2c3e50;
     margin-top: 60px;
   }
+
+  .hide {
+    visibility: hidden !important;
+}
 </style>
